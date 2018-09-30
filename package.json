@@ -21,7 +21,11 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "html-template-tag": "^2.0.0",
-    "morgan": "^1.9.1"
+    "marked": "^0.5.1",
+    "morgan": "^1.9.1",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.39.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"

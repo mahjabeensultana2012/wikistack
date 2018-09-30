@@ -5,6 +5,7 @@ const path = require('path');
 const layout = require('./views/layout');
 
 
+
 const app = express();
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "./public")));
@@ -14,8 +15,16 @@ app.use(bodyParser.json());
 
 
 app.get('/', (req,res,next) => {
-  res.send(layout("Hello World"));
+  res.redirect('/wiki');
 })
+
+
+
+const wikiRouter = require('./routes/wiki');
+const userRouter = require('./routes/user');
+app.use('/wiki', wikiRouter);
+app.use('/users', userRouter);
+//app.get('/wiki', require('./routes/wiki'));
 
 
 
